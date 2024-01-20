@@ -6,6 +6,11 @@ import (
 	"time"
 )
 
+// CheckDestinationPort checks the reachability of a destination on a specific port.
+//
+// destination string - the destination address
+// port string - the port number
+// string - the status message indicating the reachability of the destination on the specified port
 func Check(destination string, port string) string {
 	address := destination + ":" + port
 	timeout := time.Duration(5 * time.Second)
